@@ -1,7 +1,7 @@
 extends layout
 
 block content
-    #content.container.py-2
+    #content.container.py-5
         #header-and-links.row
             .col-sm-12.col-lg-8.mb-5
                 h1.display-1
@@ -9,18 +9,25 @@ block content
                     br
                     sub.text-muted.d-block Computer programmer
             .col-sm-12.col-lg-2.mt-4
-                a.btn.btn-outline-light.mb-1(href='https://github.com/t0xictyler', target='_blank')
+                a.btn.mb-1(href='https://github.com/t0xictyler', target='_blank')
                     i.bi-github
                     span &nbsp;GitHub
                 br
-                a.btn.btn-outline-light.mb-1(href='https://www.linkedin.com/in/tyler-grissom/', target='_blank')
+                a.btn.mb-1(href='https://www.linkedin.com/in/tyler-grissom/', target='_blank')
                     i.bi-linkedin
                     span &nbsp;LinkedIn
                 br
-                a.btn.btn-outline-light(href='https://linktr.ee/t0xictyler', target='_blank')
+                a.btn(href='https://linktr.ee/t0xictyler', target='_blank')
                     i.bi-link
                     span &nbsp;LinkTree
-            hr.mt-4
+            .col-sm-12.col-lg-2.mt-4
+                button#btn-dark.btn.btn-sm.btn-dark.mb-1
+                    i.bi-moon
+                    span &nbsp;Mode: Dark
+                button#btn-light.btn.btn-sm.btn-light.mb-1
+                    i.bi-sun
+                    span &nbsp;Mode: Light
+        hr
         #intro-and-project.row
             .col-sm-12.col-lg-8
                 h1.display-4 About Me
@@ -52,9 +59,9 @@ block content
                         .row.col-12
                             #mc-ip.bg-black(data-clipboard-target='#mc-ip-text')
                                 .p-4.font-space-mono(style="font-size:14px;")
-                                    span#mc-ip-text= server_ip
+                                    span#mc-ip-text=server_ip
                                     span#mc-ip-dash &nbsp;&gt;&nbsp;
-                                        span#mc-ip-copy-text Click to copy
+                                    span#mc-ip-copy-text Click to copy
         hr
 
 block scripts

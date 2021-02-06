@@ -1,4 +1,5 @@
 $bg-dark-mode: #222222
+$off-white: #e9ecef
 $twitch-purple: #6441a5
 $accent-color: lighten($twitch-purple, 10%)
 
@@ -8,12 +9,46 @@ $accent-color: lighten($twitch-purple, 10%)
   font-family: 'Space Mono', monospace
 
 body
-  background-color: black
+  background-color: $bg-dark-mode
   color: white
 
-.footer
-  background-
-  background-color: $bg-dark-mode
+  footer
+    padding-top: 50px
+    padding-bottom: 25px
+    background-color: black
+    backdrop-filter: blur(2px)
+    opacity: 0.85
+    color: white
+
+  .btn
+    outline-color: white
+    color: white
+    background-color: transparent
+
+  .btn:hover
+    text-decoration: none
+
+body.light-mode
+  background-color: $off-white
+  color: black
+
+  .btn
+    outline-color: black
+    color: black
+    background-color: transparent
+
+  .btn:hover
+    background-color: black
+    opacity: 0.85
+    color: white
+    text-decoration: none
+
+  a:hover
+    color: black
+
+  footer
+    a:hover
+      color: white
 
 a
   color: $accent-color
@@ -30,9 +65,9 @@ a:hover
   color: $accent-color
   text-decoration: none
 
-.btn.btn-dark.btn-black
-    background-color: black
-    color: white
+.bg-white
+  background-color: white
+  color: black
 
 .bg-black
   background-color: black
@@ -40,10 +75,4 @@ a:hover
 
 .bg-dark
   background-color: $bg-dark-mode
-  color: white
-
-.footer
-  padding-top: 50px
-  padding-bottom: 25px
-  background-color: black
   color: white

@@ -3,11 +3,38 @@
   font-family: 'Space Mono', monospace; }
 
 body {
-  background-color: black;
+  background-color: #222222;
   color: white; }
+  body footer {
+    padding-top: 50px;
+    padding-bottom: 25px;
+    background-color: black;
+    backdrop-filter: blur(2px);
+    opacity: 0.85;
+    color: white; }
+  body .btn {
+    outline-color: white;
+    color: white;
+    background-color: transparent; }
+  body .btn:hover {
+    text-decoration: none; }
 
-.footer {
-  background-color: #222222; }
+body.light-mode {
+  background-color: #e9ecef;
+  color: black; }
+  body.light-mode .btn {
+    outline-color: black;
+    color: black;
+    background-color: transparent; }
+  body.light-mode .btn:hover {
+    background-color: black;
+    opacity: 0.85;
+    color: white;
+    text-decoration: none; }
+  body.light-mode a:hover {
+    color: black; }
+  body.light-mode footer a:hover {
+    color: white; }
 
 a {
   color: #7e5bbe;
@@ -24,9 +51,9 @@ a:hover {
   color: #7e5bbe;
   text-decoration: none; }
 
-.btn.btn-dark.btn-black {
-  background-color: black;
-  color: white; }
+.bg-white {
+  background-color: white;
+  color: black; }
 
 .bg-black {
   background-color: black;
@@ -34,12 +61,6 @@ a:hover {
 
 .bg-dark {
   background-color: #222222;
-  color: white; }
-
-.footer {
-  padding-top: 50px;
-  padding-bottom: 25px;
-  background-color: black;
   color: white; }
 
 /*# sourceMappingURL=style.css.map */
