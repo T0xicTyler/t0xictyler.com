@@ -1,30 +1,30 @@
 extends layout
 
 block content
-    #content.container.pt-5
+    #content.container.py-2
         #header-and-links.row
             .col-sm-12.col-lg-8.mb-5
-                h1.display-4
-                    | T0xicTyler
+                h1.display-1
+                    span T0xicTyler
                     br
                     sub.text-muted.d-block Computer programmer
-            .col-sm-12.col-lg-1
-                a.btn.btn-outline-light.mb-2(href='https://github.com/t0xictyler', target='_blank')
+            .col-sm-12.col-lg-2.mt-4
+                a.btn.btn-outline-light.mb-1(href='https://github.com/t0xictyler', target='_blank')
                     i.bi-github
-                    |  GitHub
+                    span &nbsp;GitHub
                 br
-                a.btn.btn-outline-light.mb-2.mb-lg-0(href='https://www.linkedin.com/in/tyler-grissom/', target='_blank')
+                a.btn.btn-outline-light.mb-1(href='https://www.linkedin.com/in/tyler-grissom/', target='_blank')
                     i.bi-linkedin
-                    |  LinkedIn
-            .col-sm-12.col-lg-1
-                a.btn.btn-outline-light.mb-2(href='https://linktr.ee/t0xictyler', target='_blank')
+                    span &nbsp;LinkedIn
+                br
+                a.btn.btn-outline-light(href='https://linktr.ee/t0xictyler', target='_blank')
                     i.bi-link
-                    |  LinkTree
+                    span &nbsp;LinkTree
             hr.mt-4
         #intro-and-project.row
             .col-sm-12.col-lg-8
-                p.lead.mt-4.
-                    Hi! My name is Tyler and I am a nineteen year old computer programmer from the United States.
+                h1.display-4 About Me
+                p.lead Hi! My name is Tyler and I am a nineteen year old computer programmer from the United States.
                 p.lead.
                     My background primarily comes from Minecraft developing Spigot plugins with the Java
                     programming language. From there I&apos;ve learned an assortment of skills in the computer science field.
@@ -39,7 +39,7 @@ block content
                     li Utilizing a combination of technologies including HTML, CSS, JavaScript, and PHP to design and develop websites
             .col-sm-12.col-lg-4
                 .row
-                    h1.display-6 PotterPlus
+                    h1.display-4 PotterPlus
                         p.lead.
                             My current project is
                             #[a(href='https://github.com/PotterPlus/PotterPlus', target='_blank') PotterPlus]
@@ -50,15 +50,12 @@ block content
                             li A bunch of mobs
                         p.lead You can join the PotterPlus server on Minecraft 1.16.5 with the following IP address:
                         .row.col-12
-                            #mc-ip.bg-black
+                            #mc-ip.bg-black(data-clipboard-target='#mc-ip-text')
                                 .p-4.font-space-mono(style="font-size:14px;")
                                     span#mc-ip-text= server_ip
-                                    | #[#mc-ip-dash &nbsp;&gt;&nbsp;] #[#mc-ip-copy-text Click to copy]
-            hr.mt-4.mb-5.mb-md-0
-            .mb-5.mb-md-0
-            .mb-5.mb-md-0
-            .mb-5.mb-md-0
-                // Forcing mobile site to scroll all the way to the hr
+                                    span#mc-ip-dash &nbsp;&gt;&nbsp;
+                                        span#mc-ip-copy-text Click to copy
+        hr
 
 block scripts
     script(src='/scripts/clipboard.min.js')
