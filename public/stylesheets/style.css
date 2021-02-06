@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css2?family=Space+Mono&display=swap);
+.font-space-mono {
+  font-family: 'Space Mono', monospace; }
+
+body {
+  background-color: black;
+  color: white; }
+
+.footer {
+  background-color: #222222; }
+
+a {
+  color: #7e5bbe;
+  text-decoration: none; }
+
+a:hover {
+  color: white;
+  text-decoration: underline; }
+
+.accent-text {
+  color: #7e5bbe; }
+
+.btn-link {
+  color: #7e5bbe;
+  text-decoration: none; }
+
+.btn.btn-dark.btn-black {
+  background-color: black;
+  color: white; }
+
+.bg-black {
+  background-color: black;
+  color: white; }
+
+.bg-dark {
+  background-color: #222222;
+  color: white; }
+
+.footer {
+  padding-top: 50px;
+  padding-bottom: 25px;
+  background-color: black;
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */

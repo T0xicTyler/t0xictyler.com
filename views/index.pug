@@ -1,0 +1,65 @@
+extends layout
+
+block content
+    #content.container.pt-5
+        #header-and-links.row
+            .col-sm-12.col-lg-8.mb-5
+                h1.display-4
+                    | T0xicTyler
+                    br
+                    sub.text-muted.d-block Computer programmer
+            .col-sm-12.col-lg-1
+                a.btn.btn-outline-light.mb-2(href='https://github.com/t0xictyler', target='_blank')
+                    i.bi-github
+                    |  GitHub
+                br
+                a.btn.btn-outline-light.mb-2.mb-lg-0(href='https://www.linkedin.com/in/tyler-grissom/', target='_blank')
+                    i.bi-linkedin
+                    |  LinkedIn
+            .col-sm-12.col-lg-1
+                a.btn.btn-outline-light.mb-2(href='https://linktr.ee/t0xictyler', target='_blank')
+                    i.bi-link
+                    |  LinkTree
+            hr.mt-4
+        #intro-and-project.row
+            .col-sm-12.col-lg-8
+                p.lead.mt-4.
+                    Hi! My name is Tyler and I am a nineteen year old computer programmer from the United States.
+                p.lead.
+                    My background primarily comes from Minecraft developing Spigot plugins with the Java
+                    programming language. From there I&apos;ve learned an assortment of skills in the computer science field.
+                p.lead.
+                    Creating Minecraft plugins gave me an entry point into the field of Java programming from which I learned
+                    various skills.
+                ul.lead
+                    li Utilizing the Java programming language to create OOP software for Spigot servers
+                    li Utilizing Git as an SCM to effectively manage source code
+                    li Utilizing Maven and Gradle as build systems to manage dependencies and create JARs
+                    li Utilizing SQL databases to enable cloud data persistence
+                    li Utilizing a combination of technologies including HTML, CSS, JavaScript, and PHP to design and develop websites
+            .col-sm-12.col-lg-4
+                .row
+                    h1.display-6 PotterPlus
+                        p.lead.
+                            My current project is
+                            #[a(href='https://github.com/PotterPlus/PotterPlus', target='_blank') PotterPlus]
+                            , a configuration for NathanWolf&apos;s Magic plugin. It adds:
+                        ul.lead
+                            li Over 125 spells
+                            li Tons of new magical items
+                            li A bunch of mobs
+                        p.lead You can join the PotterPlus server on Minecraft 1.16.5 with the following IP address:
+                        .row.col-12
+                            #mc-ip.bg-black
+                                .p-4.font-space-mono(style="font-size:14px;")
+                                    span#mc-ip-text= server_ip
+                                    | #[#mc-ip-dash &nbsp;&gt;&nbsp;] #[#mc-ip-copy-text Click to copy]
+            hr.mt-4.mb-5.mb-md-0
+            .mb-5.mb-md-0
+            .mb-5.mb-md-0
+            .mb-5.mb-md-0
+                // Forcing mobile site to scroll all the way to the hr
+
+block scripts
+    script(src='/scripts/clipboard.min.js')
+    script(src='/scripts/index.js')
