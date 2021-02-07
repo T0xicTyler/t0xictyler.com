@@ -28,7 +28,7 @@ const links = [
     }
 ]
 
-router.get('/link(s)?', (req, res) => res.render('links'))
+router.get('/link(s)?', (req, res) => res.redirect('/'))
 router.get('/link(s)?/:linkId', (req, res) => {
     let linkId = req.params.linkId
 
