@@ -24,13 +24,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 const indexRouter = require('./routes/index')
 const linksRouter = require('./routes/links')
+const wildcardRouter = require('./routes/wildcard')
 
 app.get('/', indexRouter)
 app.get('/link(s)?', linksRouter)
 app.get('/link(s)?/:linkId', linksRouter)
-
-app.get('*', (req, res) => {
-  res.redirect('/')
-})
+app.get('*', wildcardRouter)
 
 module.exports = app;

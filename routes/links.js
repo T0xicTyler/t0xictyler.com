@@ -28,7 +28,9 @@ const links = [
     }
 ]
 
+/* If visiting /links/, redirect home */
 router.get('/link(s)?', (req, res) => res.redirect('/'))
+/* If visiting /links/somewhere, check for it and redirect if it's enumerated */
 router.get('/link(s)?/:linkId', (req, res) => {
     let linkId = req.params.linkId
 
