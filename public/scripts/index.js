@@ -8,6 +8,8 @@ const oldText = ipCopyText.html()
 const buttons = $('.btn')
 
 $(() => {
+    const clipboard = new ClipboardJS('#mc-ip') // Instantiates Clipboard.js for easy IP copying
+
     ipCopyText.hide()
 
     if (Cookies.get('color_scheme') === 'light') {
