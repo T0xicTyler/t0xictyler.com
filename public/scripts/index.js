@@ -10,6 +10,10 @@ const buttons = $('.btn')
 $(() => {
     ipCopyText.hide()
 
+    if (Cookies.get('color_scheme') === 'light') {
+        body.addClass('light-mode')
+    }
+
     loadTheme()
 
     const btnDark = $('#btn-dark')
@@ -18,11 +22,13 @@ $(() => {
     btnDark.on('click', () => {
         body.addClass('light-mode')
         loadTheme()
+        Cookies.set('color_scheme', 'light')
     })
 
     btnLight.on('click', () => {
         body.removeClass('light-mode')
         loadTheme()
+        Cookies.set('color_scheme', 'dark')
     })
 
     ipCopyText.hide()

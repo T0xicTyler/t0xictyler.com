@@ -5,7 +5,9 @@ const logger = require('morgan')
 const sassMiddleware = require('node-sass-middleware')
 const app = express()
 
-app.set('view', path.join(__dirname, 'views'))
+app.disable('etag')
+
+app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
 app.use(logger('dev'))
@@ -21,8 +23,11 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')))
 
 const indexRouter = require('./routes/index')
+const linksRouter = require('./routes/links')
 
-app.use('/', indexRouter)
+app.get('/', indexRouter)
+app.get('/link(s)?', linksRouter)
+app.get('/link(s)?/:linkId', linksRouter)
 
 app.get('*', (req, res) => {
   res.redirect('/')
